@@ -1,0 +1,38 @@
+{
+  "GLD": {
+    "auto_adjust": true,
+    "downloaded_at_utc": "2026-11-16T02:52:00+00:00",
+    "first_session": "2010-01-04",
+    "last_session": "2020-12-31",
+    "provider": "yfinance",
+    "requested_end_inclusive": "2020-12-31",
+    "requested_start": "2010-01-01",
+    "rows": 2769,
+    "sha256": "3f58dba0c1aa15d9509b1c7081ce48439d09a23dac74602b4d6425ba257e046f",
+    "yfinance_version": "1.8.0"
+  },
+  "SPY": {
+    "auto_adjust": true,
+    "downloaded_at_utc": "2026-11-16T02:52:00+00:00",
+    "first_session": "2010-01-04",
+    "last_session": "2020-12-31",
+    "provider": "yfinance",
+    "requested_end_inclusive": "2020-12-31",
+    "requested_start": "2010-01-01",
+    "rows": 2769,
+    "sha256": "c07c1c12a4d328e6a85ab07e9f69d063fbeaaabe5853ec22954e2aeaca55e6db",
+    "yfinance_version": "1.8.0"
+  },
+  "TLT": {
+    "auto_adjust": true,
+    "downloaded_at_utc": "2026-11-16T02:52:00+00:00",
+    "first_session": "2010-01-04",
+    "last_session": "2020-12-31",
+    "provider": "yfinance",
+    "requested_end_inclusive": "2020-12-31",
+    "requested_start": "2010-01-01",
+    "rows": 2769,
+    "sha256": "a4c2c559d66083b561f73b217fc64d617c44335dd4f09a076c913352563bf8ee",
+    "yfinance_version": "1.8.0"
+  }
+}

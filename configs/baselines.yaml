@@ -1,0 +1,29 @@
+# Days 1-5 experiment: naive variance baselines, walk-forward, development period only.
+symbols: [SPY, TLT, GLD]
+
+data:
+  start: "2010-01-01"
+  # Fixed end date (inclusive). Kept at the end of the development period so the
+  # 2021+ final holdout is never downloaded, plotted, or scored by accident.
+  end: "2020-12-31"
+  # auto_adjust=True: yfinance returns closes adjusted for splits AND dividends,
+  # so log returns are total returns (no fake -x% jump on ex-dividend days).
+  auto_adjust: true
+  raw_dir: data/raw
+
+periods:
+  initial_train_end: "2017-12-31"   # 2010-2017: initial training only
+  dev_start: "2018-01-01"           # 2018-2020: walk-forward forecasts, the only scored period
+  dev_end: "2020-12-31"             # everything after this is the reserved final holdout
+
+horizons: [1, 5]          # in trading sessions, not calendar days
+refit_frequency: monthly  # refit on the first eligible forecast origin of each calendar month
+models: [naive_1, naive_22]
+
+# Strictly positive variance floor applied to every forecast before QLIKE.
+# floor = fraction * mean(squared return) over the initial training period, per asset.
+# Chosen before looking at any development-period results; not tuned.
+floor:
+  fraction_of_train_mean_variance: 0.01
+
+output_dir: reports/days1_5
