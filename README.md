@@ -1,7 +1,24 @@
-# Volatility and Risk Forecasting (QUARCC)
+# Can Machine Learning Predict Market Risk? (QUARCC)
 
-Does machine learning forecast volatility better than the standard baselines (HAR, GARCH),
-and when? `START_HERE_CODING_AGENT.md` defines the scope and research protocol. Reference papers are in `risk-volatility-documentation/`.
+We're testing whether machine learning can predict how much markets will move,
+which is called volatility, better than the standard models finance has used for decades.
+
+**In plain terms:** predicting whether a stock goes up or down is close to impossible,
+but predicting *how much* it will swing is not. Calm days tend to follow calm days,
+and turbulent days follow turbulent ones. We build models that forecast those swings
+for SPY, TLT and GLD, then check:
+
+1. **Does ML actually win?** We compare LightGBM against the two classic models,
+   HAR and GARCH, giving each the same data so the comparison is fair.
+2. **When does it win?** We break the results down by asset, forecast horizon
+   (next day vs. next week), and calm vs. stressed markets.
+3. **Does it matter?** We test whether better forecasts lead to better risk
+   estimates (Value-at-Risk) and a better-performing portfolio.
+
+A result showing that ML adds little is still a valid finding.
+
+**Getting started:** `START_HERE_CODING_AGENT.md` has the full scope and research
+protocol, and the reference papers are in `risk-volatility-documentation/`.
 
 ## Status
 
